@@ -1,0 +1,8 @@
+FUNCTION dot_product(x1 : FLOAT, x2 : FLOAT, y1 : FLOAT, y2 : FLOAT ) : FLOAT
+VAR
+    ps : FLOAT;
+BEGIN
+    ps:= x1*x2 + y1*y2
+    RETURN ps ;
+END
+

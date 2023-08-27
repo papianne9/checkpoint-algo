@@ -1,0 +1,72 @@
+//checkpoint exo 1
+
+ALGORITHM checkpoint 1
+VAR
+    tabVoy : ARRAY_OF CHAR[];
+    sentence : STRING;
+    numVoy : INTEGER := 0;
+    nbMots : INTEGER := 0;
+    selectedCHAR: CHAR;
+    selectedVoy: CHAR;
+    i, j : INTEGER;
+BEGIN 
+    tabVoy := ["i", "u", "o", "a", "e", "y", "I", "U", "A", "E", "Y"]
+    write("Entrer une phrase: ");
+    Read(sentence);
+
+    FOR i FROM 0 TO sentence.lengh-1 DO
+           
+         // on stocke le caractere selectionne 
+            selectedChar:= sentence[i]
+
+        // on incrementele nombre de mots si le caratere est un espace ou un point
+           IF (selectedChar = " " OR selectedChar = ".") THEN
+               nbMots:= nbMots + 1
+           END_IF
+
+        // on parcours le nombre de voyelles
+           IF (selectedChar = selectedVoy) THEN
+               numVoy:= numVoy + 1
+            END_IF
+    END_FOR
+
+    write("le nombre de mots est :", nbMots);
+    write("le nombre de voyelles est :", numVoy);
+END
+
+---------------------------------------------------------------
+
+//checkpoint exo 2
+
+ALGORITHM checkpoint 2
+VAR
+    ensemble_1 : ARRAY_OF INTEGER[];
+    ensemble_2 : ARRAY_OF INTEGER[];
+    elementDistincts : ARRAY_OF BOOLEAN[];
+    sommeTotal : INTEGER := 0;
+    i : INTEGER;
+BEGIN
+    ensemble_1 := [3, 1, 7, 9];
+    ensemble_2 := [2, 4, 1, 9, 3];
+
+    FOR i FROM 0 TO elementDistincts.lengh-1 DO
+        elementDistincts[i] := false;
+    END_FOR
+
+    FOR i FROM 0 TO elementDistincts.lengh-1 DO 
+        elementDistincts_1[i] := TRUE;
+    END_FOR
+
+    FOR i FROM 0 TO ensemble_2.lengh-1 DO 
+    elementDistincts[ensemble_2[i]] := TRUE
+    END_FOR
+
+    FOR i FROM 0 TO elementDistincts.lengh-1 DO 
+        IF elementDistincts(i) THEN
+            sommeTotal := sommeTotal + elementDistincts[i];
+        END_IF
+    END_FOR
+
+    write("la somme des elements distincts est : ", sommeTotal);
+
+END
